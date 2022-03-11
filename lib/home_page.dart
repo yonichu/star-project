@@ -14,14 +14,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: gradientEndColor,
+      backgroundColor: Colors.red,
       body: SafeArea(
         top: false,
         child: SingleChildScrollView(
           child: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [gradientStartColor, gradientEndColor],
+                  colors: [Colors.yellow, gradientEndColor],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   stops: [0.3, 0.7]),
