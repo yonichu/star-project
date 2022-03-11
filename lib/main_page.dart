@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/NC9ufI.png"),
+                image: AssetImage("assets/867277.jpg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -33,15 +33,6 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.all(32.0),
                     child: Column(
                       children: <Widget>[
-                        Text(
-                          'Planeto',
-                          style: GoogleFonts.poppins(
-                            fontSize: 44.0,
-                            fontWeight: FontWeight.w900,
-                            color: titleTextColor,
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
                       ],
                     ),
                   ),
@@ -93,20 +84,8 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ],
                               ),
-                              Positioned(
-                                bottom: 50.0,
-                                right: 0,
-                                child: Text(
-                                  planets[index].position.toString(),
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 150.0,
-                                    fontWeight: FontWeight.w900,
-                                    color: primaryTextColor.withOpacity(0.15),
-                                  ),
-                                ),
-                              ),
                               Hero(
-                                tag: planets[index].position,
+                                tag: planets[index],
                                 child: Image.asset(planets[index].iconImage),
                               ),
                             ],

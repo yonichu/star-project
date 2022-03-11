@@ -41,7 +41,7 @@ try {
               child: Column(
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(32.0),
+                    padding: const EdgeInsets.all(27.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -49,7 +49,7 @@ try {
                         Text(
                           widget.planetInfo.name,
                           style: GoogleFonts.poppins(
-                            fontSize: 56.0,
+                            fontSize: 52.0,
                             fontWeight: FontWeight.w900,
                             color: primaryTextColor,
                           ),
@@ -78,60 +78,16 @@ try {
                       ],
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 32.0),
-                    child: Text(
-                      'Gallery',
-                      style: TextStyle(
-                        fontFamily: 'Avenir',
-                        fontSize: 25,
-                        color: Color(0xff47455f),
-                        fontWeight: FontWeight.w300,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                  Container(
-                    height: 250.0,
-                    padding: const EdgeInsets.only(left: 32.0),
-                    child: ListView.builder(
-                      itemCount: widget.planetInfo.images.length,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Card(
-                          clipBehavior: Clip.antiAlias,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(24),
-                          ),
-                          child: AspectRatio(
-                            aspectRatio: 1,
-                            child: Image.network(widget.planetInfo.images[index], fit: BoxFit.cover),
-                          ),
-                        );
-                      },
-                    ),
-                  )
+                  
                 ],
               ),
             ),
             Positioned(
-              right: -64,
+              right: 15,
+              top: 15,
               child: Hero(
-                tag: widget.planetInfo.position,
+                tag: widget.planetInfo,
                 child: Image.asset(widget.planetInfo.iconImage),
-              ),
-            ),
-            Positioned(
-              top: 60,
-              left: 32,
-              child: Text(
-                widget.planetInfo.position.toString(),
-                style: GoogleFonts.poppins(
-                  fontSize: 247,
-                  color: primaryTextColor.withOpacity(0.08),
-                  fontWeight: FontWeight.w900,
-                ),
-                textAlign: TextAlign.left,
               ),
             ),
             IconButton(
