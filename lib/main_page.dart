@@ -20,11 +20,10 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Colors.yellow, gradientEndColor],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  stops: [0.3, 0.7]),
+              image: DecorationImage(
+                image: AssetImage("assets/NC9ufI.png"),
+                fit: BoxFit.cover,
+              ),
             ),
             child: SafeArea(
               child: Column(
@@ -43,29 +42,6 @@ class _HomePageState extends State<HomePage> {
                           ),
                           textAlign: TextAlign.left,
                         ),
-                        DropdownButton(
-                          items: [
-                            DropdownMenuItem<String>(
-                              child: Text(
-                                'Solar System',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 24.0,
-                                  fontWeight: FontWeight.w500,
-                                  color: secondaryTextColor,
-                                ),
-                                textAlign: TextAlign.left,
-                              ),
-                            ),
-                          ],
-                          onChanged: (value) {},
-                          icon: Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Image.asset(
-                              'assets/drop_down_icon.png',
-                            ),
-                          ),
-                          underline: SizedBox(),
-                        )
                       ],
                     ),
                   ),
@@ -105,50 +81,13 @@ class _HomePageState extends State<HomePage> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(32),
                                     ),
-                                    color: Colors.white,
+                                    color: Colors.transparent,
                                     child: Padding(
                                       padding: const EdgeInsets.all(32.0),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          SizedBox(height: 100.0),
-                                          Text(
-                                            planets[index].name,
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 32.0,
-                                              fontWeight: FontWeight.w900,
-                                              color: primaryTextColor,
-                                            ),
-                                            textAlign: TextAlign.left,
-                                          ),
-                                          Text(
-                                            'Solar System',
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 23.0,
-                                              fontWeight: FontWeight.w500,
-                                              color: secondaryTextColor,
-                                            ),
-                                            textAlign: TextAlign.left,
-                                          ),
-                                          SizedBox(height: 32),
-                                          Row(
-                                            children: <Widget>[
-                                              Text(
-                                                'Know More',
-                                                style: GoogleFonts.poppins(
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                                textAlign: TextAlign.left,
-                                              ),
-                                              Icon(
-                                                Icons.arrow_forward,
-                                                color: secondaryTextColor,
-                                              )
-                                            ],
-                                          ),
-                                        ],
+
                                       ),
                                     ),
                                   ),
@@ -182,32 +121,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(
-            top: Radius.circular(36.0),
-          ),
-          color: navigationColor,
-        ),
-        padding: const EdgeInsets.all(24.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            IconButton(
-              icon: Image.asset('assets/menu_icon.png'),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Image.asset('assets/search_icon.png'),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Image.asset('assets/profile_icon.png'),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
+      
     );
   }
 }
