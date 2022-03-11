@@ -1,11 +1,35 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newproject/constants.dart';
 import 'package:newproject/swiper_data.dart';
 
-class DetailPage extends StatelessWidget {
+class DetailPage extends StatefulWidget {
   final PlanetInfo planetInfo;
   const DetailPage({Key? key, required this.planetInfo}) : super(key: key);
+
+  @override
+  State<DetailPage> createState() => _DetailPageState();
+}
+
+class _DetailPageState extends State<DetailPage> {
+  @override
+  void initState() {
+    super.initState();
+    ()async {
+try {
+  final result = await InternetAddress.lookup('example.com');
+  if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+    print('connected');
+  }
+} on SocketException catch (_) {
+  print('not connected');
+}
+    }();
+    
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +45,9 @@ class DetailPage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        SizedBox(height: 300),
+                        const SizedBox(height: 300),
                         Text(
-                          planetInfo.name,
+                          widget.planetInfo.name,
                           style: GoogleFonts.poppins(
                             fontSize: 56.0,
                             fontWeight: FontWeight.w900,
@@ -38,10 +62,10 @@ class DetailPage extends StatelessWidget {
                             fontWeight: FontWeight.w300,
                           ),
                         ),
-                        Divider(color: Colors.black38),
-                        SizedBox(height: 32.0),
+                        const Divider(color: Colors.black38),
+                        const SizedBox(height: 32.0),
                         Text(
-                          planetInfo.description,
+                          widget.planetInfo.description,
                           maxLines: 5,
                           overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.poppins(
@@ -49,19 +73,19 @@ class DetailPage extends StatelessWidget {
                               fontSize: 20.0,
                               color: contentTextColor),
                         ),
-                        SizedBox(height: 32.0),
-                        Divider(color: Colors.black38),
+                        const SizedBox(height: 32.0),
+                        const Divider(color: Colors.black38),
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 32.0),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 32.0),
                     child: Text(
                       'Gallery',
                       style: TextStyle(
                         fontFamily: 'Avenir',
                         fontSize: 25,
-                        color: const Color(0xff47455f),
+                        color: Color(0xff47455f),
                         fontWeight: FontWeight.w300,
                       ),
                       textAlign: TextAlign.left,
@@ -71,7 +95,7 @@ class DetailPage extends StatelessWidget {
                     height: 250.0,
                     padding: const EdgeInsets.only(left: 32.0),
                     child: ListView.builder(
-                      itemCount: planetInfo.images.length,
+                      itemCount: widget.planetInfo.images.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Card(
@@ -81,10 +105,7 @@ class DetailPage extends StatelessWidget {
                           ),
                           child: AspectRatio(
                             aspectRatio: 1,
-                            child: Image.network(
-                              planetInfo.images[index],
-                              fit: BoxFit.cover,
-                            ),
+                            child: Image.network(widget.planetInfo.images[index], fit: BoxFit.cover),
                           ),
                         );
                       },
@@ -96,15 +117,15 @@ class DetailPage extends StatelessWidget {
             Positioned(
               right: -64,
               child: Hero(
-                tag: planetInfo.position,
-                child: Image.asset(planetInfo.iconImage),
+                tag: widget.planetInfo.position,
+                child: Image.asset(widget.planetInfo.iconImage),
               ),
             ),
             Positioned(
               top: 60,
               left: 32,
               child: Text(
-                planetInfo.position.toString(),
+                widget.planetInfo.position.toString(),
                 style: GoogleFonts.poppins(
                   fontSize: 247,
                   color: primaryTextColor.withOpacity(0.08),
@@ -114,7 +135,7 @@ class DetailPage extends StatelessWidget {
               ),
             ),
             IconButton(
-              icon: Icon(Icons.arrow_back_ios),
+              icon: const Icon(Icons.arrow_back_ios),
               onPressed: () {
                 Navigator.pop(context);
               },

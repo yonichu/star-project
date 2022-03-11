@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: gradientEndColor,
       body: SafeArea(
         top: false,
         child: SingleChildScrollView(
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Container(
                     height: 500.0,
-                    padding: const EdgeInsets.only(left: 32.0),
+                    padding: const EdgeInsets.only(left: 5.0),
                     child: Swiper(
                       // autoplay: true,
                       itemCount: planets.length,
@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                                           Text(
                                             planets[index].name,
                                             style: GoogleFonts.poppins(
-                                              fontSize: 44.0,
+                                              fontSize: 32.0,
                                               fontWeight: FontWeight.w900,
                                               color: primaryTextColor,
                                             ),
@@ -156,11 +156,11 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Positioned(
                                 bottom: 50.0,
-                                right: 20,
+                                right: 0,
                                 child: Text(
                                   planets[index].position.toString(),
                                   style: GoogleFonts.poppins(
-                                    fontSize: 200.0,
+                                    fontSize: 150.0,
                                     fontWeight: FontWeight.w900,
                                     color: primaryTextColor.withOpacity(0.15),
                                   ),
