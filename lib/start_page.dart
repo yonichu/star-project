@@ -12,7 +12,14 @@ class _DomPageState extends State<DomPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: InkWell(
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/pepe.jpg"),
+                fit: BoxFit.cover,
+            ),
+          ),
+
           child: Stack(
             children: <Widget>[ 
                 Column(
