@@ -12,7 +12,7 @@ class _DomPageState extends State<DomPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: Container( 
         decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/pepe.jpg"),
@@ -23,9 +23,9 @@ class _DomPageState extends State<DomPage> {
           child: Stack(
             children: <Widget>[ 
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+
                     children: <Widget>[ new Padding(padding: 
-                    const EdgeInsets.symmetric(horizontal: 200, vertical: 0)),
+                    const EdgeInsets.symmetric(horizontal: 200, vertical: 100)),
                       ElevatedButton(
                         
                         child: const Text('Explore Planets!'),
