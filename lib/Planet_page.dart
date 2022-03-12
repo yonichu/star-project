@@ -41,7 +41,8 @@ class _PlanetPageState extends State<PlanetPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(90.0),
+                    padding: const EdgeInsets.all(65.0),
+                    
                     child: Column(
                       children: <Widget>[
                       ],
@@ -78,8 +79,18 @@ class _PlanetPageState extends State<PlanetPage> {
                             children: <Widget>[
                               
                               Hero(
+                                
                                 tag: planets[index],
-                                child: Image.asset(planets[index].iconImage),
+                                child: Column(children: <Widget>[
+                                  Image.asset(planets[index].iconImage),
+                                  SizedBox(height: 50,),
+                                  Text(
+                                    planets[index].name, style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 30
+                                      ) 
+                                    ),
+                                ],)
                               ),
                             ],
                           ),
