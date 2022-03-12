@@ -1,4 +1,4 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:newproject/start_page.dart';
 //import 'package:flutter/dart.core';
 
@@ -8,7 +8,6 @@ class NasaNewsPage extends StatefulWidget {
 }
 
 class _NasaNewsPageState extends State<NasaNewsPage> {
-  @override
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,4 +46,4 @@ class Article
   }
 
 
-}*/
+}
