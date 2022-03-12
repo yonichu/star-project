@@ -25,9 +25,10 @@ class _DomPageState extends State<DomPage> {
                 Column(
                     children: <Widget>[ const Padding(padding: 
                     EdgeInsets.symmetric(horizontal: 200, vertical: 80)),
-                    const Text(
+                    Text(
                       'Planet Trip',
-                      style: TextStyle(color: Colors.white, fontSize: 80, ),
+                      //style: TextStyle(color: Colors.white, fontSize: 80, fontFamily: 'Bauhaus 93'),
+                      style: GoogleFonts.baumans(fontSize: 80, color: Colors.white)
                     ),
                     SizedBox(height: 80),
                     SizedBox(
