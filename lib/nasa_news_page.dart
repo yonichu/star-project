@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:newproject/start_page.dart';
 import 'package:flutter/dart.core';
 
@@ -46,4 +46,4 @@ class Article
   }
 
 
-}
+}*/
