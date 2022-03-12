@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:newproject/Planet_page.dart';
 import 'package:newproject/nasa_news_page.dart';
 
@@ -23,12 +24,16 @@ class _DomPageState extends State<DomPage> {
             children: <Widget>[ 
                 Column(
                     children: <Widget>[ new Padding(padding: 
-                    const EdgeInsets.symmetric(horizontal: 200, vertical: 100)),
+                    const EdgeInsets.symmetric(horizontal: 200, vertical: 200)),
                     new SizedBox(
                       width: 200.0,
                       height: 100.0,
                         child: ElevatedButton(
-                          child: const Text('Explore Planets!'),
+                          child: Text(
+                            'Explore Planets!',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20
+                            )),
                           onPressed: () {
                             Navigator.push(
                               context,
@@ -42,7 +47,11 @@ class _DomPageState extends State<DomPage> {
                       width: 200.0,
                       height: 100.0,
                         child: ElevatedButton(
-                            child: const Text('See NASA News!'),
+                            child: Text(
+                              'See NASA News!',
+                              style: GoogleFonts.poppins(
+                                fontSize: 20
+                              )),
                             onPressed: () {
                               Navigator.push(
                                 context,
