@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main_page.dart';
+import 'start_page.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
@@ -9,12 +9,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Planeto',
+      title: 'Za utre!!!!!!',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: DomPage(),
     );
   }
 }

@@ -1,107 +1,71 @@
 class PlanetInfo {
-  final int position;
   final String name;
   final String iconImage;
   final String description;
-  final List<String> images;
+ 
 
   PlanetInfo(
-    this.position, {
+     {
     required this.name,
     required this.iconImage,
-    required this.images,
     required this.description,
   });
 }
 
 List<PlanetInfo> planets = [
   PlanetInfo(
-    1,
-    name: 'Mercury',
+    name: 'Меркурий',
     iconImage: 'assets/mercury.png',
     description:
-        "Zipping around the sun in only 88 days, Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury experiences dramatic changes in its day and night temperatures: Day temperatures can reach a scorching 840  F (450 C), which is hot enough to melt lead. Meanwhile on the night side, temperatures drop to minus 290 F (minus 180 C).",
-    images: [
-      'https://cdn.pixabay.com/photo/2013/07/18/10/57/mercury-163610_1280.jpg',
-      'https://cdn.pixabay.com/photo/2014/07/01/11/38/planet-381127_1280.jpg',
-      'https://image.shutterstock.com/image-illustration/mercury-high-resolution-images-presents-600w-367615301.jpg'
-    ],
+        "От всички планети в Слънчевата система Меркурий e най-близо до Слънцето.Меркурий e една от най-малките планети в Слънчевата система.Нейният диаметър - 4878km, e почти три пъти по-малък от земния.Единствено Плутон e по-малък от нея.Масата на планетата e 20 пъти по-малка от тази на Земята.Планетата неслучайно носи името на бързоногия вестител на олимпийските богове Хермес (в римската митология - Меркурий). Това e най-бързо движещата ce планета в Слънчевата система.",
+   
   ),
   PlanetInfo(
-    2,
-    name: 'Venus',
+    name: 'Венера',
     iconImage: 'assets/venus.png',
     description:
-        "The second planet from the sun, Venus is Earth's twin in size. Radar images beneath its atmosphere reveal that its surface has various mountains and volcanoes. But beyond that, the two planets couldn't be more different. Because of its thick, toxic atmosphere that's made of sulfuric acid clouds, Venus is an extreme example of the greenhouse effect. It's scorching-hot, even hotter than Mercury. The average temperature on Venus' surface is 900 F (465 C). At 92 bar, the pressure at the surface would crush and kill you. And oddly, Venus spins slowly from east to west, the opposite direction of most of the other planets.",
-    images: [
-      'https://cdn.pixabay.com/photo/2011/12/13/14/39/venus-11022_1280.jpg',
-      'https://image.shutterstock.com/image-photo/solar-system-venus-second-planet-600w-515581927.jpg'
-    ],
+        "Венера е описвана често като планетата сестра на Земята. Двете си приличат по размер, плътност и химичен състав. При формирането си са били почти неразличими една от друга.Днес, обаче те са толкова различни, колкото две планети могат да бъдат. Докато Земята е свят, където кипи живот, Венера е необитаем ад с плътна, гореща атмосфера, където липсват каквито и да е следи от кислород или вода.",
+  
   ),
   PlanetInfo(
-    3,
-    name: 'Earth',
+    name: 'Земята',
     iconImage: 'assets/earth.png',
     description:
-        "The third planet from the sun, Earth is a waterworld, with two-thirds of the planet covered by ocean. It's the only world known to harbor life. Earth's atmosphere is rich in nitrogen and oxygen. Earth's surface rotates about its axis at 1,532 feet per second (467 meters per second) — slightly more than 1,000 mph (1,600 kph) — at the equator. The planet zips around the sun at more than 18 miles per second (29 km per second).",
-    images: [
-      'https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015_1280.jpg',
-      'https://cdn.pixabay.com/photo/2011/12/14/12/11/astronaut-11080_1280.jpg',
-      'https://cdn.pixabay.com/photo/2016/01/19/17/29/earth-1149733_1280.jpg',
-      'https://image.shutterstock.com/image-photo/3d-render-planet-earth-viewed-600w-1069251782.jpg'
-    ],
+        "Нашата планета Земя, е третата планета в Слънчевата система и има доста и интересни характеристики. За разлика от имената на останалите планети, кръстени на богове от римската или гръцката митология, Земята е получила името си преди поне 1000 години,като резултат на културните разбирания на хората.Трябва да се отбележи, че всеки език си има негово име за планетата – например „Еarth“ на английски, „Тerra“ на португалски, „Аarde“ на холандски.Общото между наименованието й на всички езици е, че значението е почти едно и също – земя или почва.",
+   
   ),
   PlanetInfo(
-    4,
-    name: 'Mars',
+    name: 'Марс',
     iconImage: 'assets/mars.png',
     description:
-        "The fourth planet from the sun is Mars, and it's a cold, desert-like place covered in dust. This dust is made of iron oxides, giving the planet its iconic red hue. Mars shares similarities with Earth: It is rocky, has mountains, valleys and canyons, and storm systems ranging from localized tornado-like dust devils to planet-engulfing dust storms. ",
-    images: [
-      'https://cdn.pixabay.com/photo/2012/11/28/09/08/mars-67522_1280.jpg',
-      'https://cdn.pixabay.com/photo/2014/12/17/20/43/red-planet-571902_1280.jpg'
-    ],
+        "Марс носи името на римският бог на войната, е и свят, който вълнува все повече хора. Някога там е имало течаща вода, но днес Червената планета – както е познат Марс – е студен, сух свят, а повърхността му е набраздена от каньони и отдавна угаснали вулкани.",
+   
   ),
-  PlanetInfo(5,
-      name: 'Jupiter',
+  PlanetInfo(
+      name: 'Юпитер',
       iconImage: 'assets/jupiter.png',
       description:
-          "The fifth planet from the sun, Jupiter is a giant gas world that is the most massive planet in our solar system — more than twice as massive as all the other planets combined, according to NASA. Its swirling clouds are colorful due to different types of trace gases. And a major feature in its swirling clouds is the Great Red Spot, a giant storm more than 10,000 miles wide. It has raged at more than 400 mph for the last 150 years, at least. Jupiter has a strong magnetic field, and with 75 moons, it looks a bit like a miniature solar system.",
-      images: [
-        'https://cdn.pixabay.com/photo/2012/01/09/10/41/jupiter-11617_1280.jpg',
-        'https://www.nasa.gov/sites/default/files/thumbnails/image/pia2293-1041b.gif'
-      ]),
+          "Юпитер е петата поред планета от Слънцето и носи името на най-могъщият бог от римския пантеон. Той е и най-големият от всички планети в системата ни. Третият най-ярък обект в нощното небе (след Луната и Венера), той е и доста лесен за наблюдение и изследване.",
+      ),
   PlanetInfo(
-    6,
-    name: 'Saturn',
+    name: 'Сатурн',
     iconImage: 'assets/saturn.png',
     description:
-        "The sixth planet from the sun, Saturn is known most for its rings. When polymath Galileo Galilei first studied Saturn in the early 1600s, he thought it was an object with three parts: a planet and two large moons on either side. Not knowing he was seeing a planet with rings, the stumped astronomer entered a small drawing — a symbol with one large circle and two smaller ones — in his notebook, as a noun in a sentence describing his discovery. More than 40 years later, Christiaan Huygens proposed that they were rings. The rings are made of ice and rock and scientists are not yet sure how they formed. The gaseous planet is mostly hydrogen and helium and has numerous moons.",
-    images: [
-      'https://www.nasa.gov/sites/default/files/thumbnails/image/pia18314-1041.jpg',
-      'https://www.nasa.gov/sites/default/files/images/116780main_image_feature_340_ys_full.jpg'
-    ],
+        "Бледият, жълтеникав Сатурн, е различава доста от останалите външни планети с великолепните пръстени, които опасват екватора му. Носи името на един могъщ бог от римския пантеон, баща на Юпитер, той е шестата планета от Слънцето. Пръстените на Сатурн – може би най-разпознаваемата характеристика на планетата. Различаваме общо седем пръстена – всеки от тях носи име на буква от A до F, в зависимост от реда на откриването им. Разстоянията между пръстените, носят имената на астрономите които са ги открили. Общата структура на пръстените е от ледени късове с различна големина – ледът отразява слънчевата светлина и кара самите пръстени да блестят.",
+    
   ),
   PlanetInfo(
-    7,
-    name: 'Uranus',
+    name: 'Уран',
     iconImage: 'assets/uranus.png',
     description:
-        "The seventh planet from the sun, Uranus is an oddball. It has clouds made of hydrogen sulfide, the same chemical that makes rotten eggs smell so foul. It rotates from east to west like Venus. But unlike Venus or any other planet, its equator is nearly at right angles to its orbit — it basically orbits on its side. Astronomers believe an object twice the size of Earth collided with Uranus roughly 4 billion years ago, causing Uranus to tilt. That tilt causes extreme seasons that last 20-plus years, and the sun beats down on one pole or the other for 84 Earth-years at a time. ",
-    images: [
-      'https://www.nasa.gov/sites/default/files/images/511494main_PIA01354-full_full.jpg',
-      'https://www.nasa.gov/sites/default/files/thumbnails/image/640801main_uranus-aurora-.jpg'
-    ],
+        "Уран е син, привидно скучен свят, който има система от пръстени и цяло семейство луни. Незабележимият му, на пръв поглед, външен вид обаче е измамен. Оста му на въртене е наклонена на 98 ˚, което, погледнато от Земята, изглежда, като да го кара да се върти на една страна. Същият този ефект се предава и на системата му от пръстени и луни, които, също привидно за наблюдател от Земята, изглеждат, като че ли обикалят около него „отгоре надолу“. На всяко завъртане около Слънцето, северният и южният му полюс преживяват 42-годишно постоянно греене и 42 години пълна тъмнина. Това от своя страна води до доста дълги и контрастни сезони.",
+   
   ),
   PlanetInfo(
-    8,
-    name: 'Neptune',
+    name: 'Нептун',
     iconImage: 'assets/neptune.png',
     description:
-        "The eighth planet from the sun, Neptune is about the size of Uranus and is known for supersonic strong winds. Neptune is far out and cold. The planet is more than 30 times as far from the sun as Earth. Neptune was the first planet predicted to exist by using math, before it was visually detected. Irregularities in the orbit of Uranus led French astronomer Alexis Bouvard to suggest some other planet might be exerting a gravitational tug. German astronomer Johann Galle used calculations to help find Neptune in a telescope. Neptune is about 17 times as massive as Earth and has a rocky core.",
-    images: [
-      'https://www.nasa.gov/sites/default/files/thumbnails/imageneptune_full.jpg',
-      'https://www.nasa.gov/sites/default/files/images/110411main_Voyager2_280_yshires.jpg'
-    ],
+        "Нептун е най-отдалечената от Слънцето планета. Температурата на повърхността му достига вледеняващите -201 ˚C! Оста му на въртене е наклонена на 28,3 ˚, което обособява и сезони – с тази разлика, че на Нептун те траят по около 40 години.",
+   
   ),
 ];

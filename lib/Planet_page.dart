@@ -1,16 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newproject/start_page.dart';
 import 'package:newproject/detail_page.dart';
 import 'package:newproject/swiper_data.dart';
 import 'constants.dart';
 
-class HomePage extends StatefulWidget {
+class PlanetPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _PlanetPageState createState() => _PlanetPageState();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Second Route'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Go back!'),
+          
+        ),
+      ),
+    );
+  }
 }
 
-class _HomePageState extends State<HomePage> {
+class _PlanetPageState extends State<PlanetPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +39,7 @@ class _HomePageState extends State<HomePage> {
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/NC9ufI.png"),
+                image: AssetImage("assets/pepe.jpg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -30,18 +48,9 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(32.0),
+                    padding: const EdgeInsets.all(144.0),
                     child: Column(
                       children: <Widget>[
-                        Text(
-                          'Planeto',
-                          style: GoogleFonts.poppins(
-                            fontSize: 44.0,
-                            fontWeight: FontWeight.w900,
-                            color: titleTextColor,
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
                       ],
                     ),
                   ),
@@ -73,46 +82,16 @@ class _HomePageState extends State<HomePage> {
                           },
                           child: Stack(
                             children: <Widget>[
-                              Column(
-                                children: <Widget>[
-                                  SizedBox(height: 100.0),
-                                  Card(
-                                    elevation: 8.0,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                    color: Colors.transparent,
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(32.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Positioned(
-                                bottom: 50.0,
-                                right: 0,
-                                child: Text(
-                                  planets[index].position.toString(),
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 150.0,
-                                    fontWeight: FontWeight.w900,
-                                    color: primaryTextColor.withOpacity(0.15),
-                                  ),
-                                ),
-                              ),
+                              
                               Hero(
-                                tag: planets[index].position,
+                                tag: planets[index],
                                 child: Image.asset(planets[index].iconImage),
                               ),
                             ],
                           ),
                         );
                       },
+                      
                     ),
                   ),
                 ],
