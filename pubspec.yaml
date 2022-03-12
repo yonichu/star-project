@@ -29,10 +29,6 @@ http: ^0.13.3
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  firebase_core: ^0.7.0
-  firebase_analythics: ^0.7.1
-  firebase_auth: ^0.20.1
-  cloud_firestore: ^0.16.0+1
   flutter:
     sdk: flutter
   google_fonts:
