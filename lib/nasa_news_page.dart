@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newproject/start_page.dart';
-import 'package:flutter/dart.core';
+//import 'package:flutter/dart.core';
 
 class NasaNewsPage extends StatefulWidget {
   @override
@@ -34,6 +34,7 @@ class Article
     this.description = '', 
     this.title = '',
     this.date = ''});
+  
   factory Article.fromJson(Map<String, dynamic> json){
 
     return Article(
