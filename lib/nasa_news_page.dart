@@ -11,7 +11,15 @@ class _NasaNewsPageState extends State<NasaNewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
       
+        backgroundColor: Colors.transparent,
+        leading: IconButton(icon:const Icon(Icons.arrow_back_ios), onPressed: () {
+          Navigator.of(context).maybePop();
+        },
+        color: Colors.white),
+      ),
     );
   }
 }
@@ -43,7 +51,6 @@ class Article
       hdImageUrl: json['hdurl'], 
       date: json['date'], 
       mediaType: json['media_type']);
+      
   }
-
-
 }
