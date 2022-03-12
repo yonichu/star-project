@@ -24,24 +24,33 @@ class _DomPageState extends State<DomPage> {
                 Column(
                     children: <Widget>[ new Padding(padding: 
                     const EdgeInsets.symmetric(horizontal: 200, vertical: 100)),
-                      ElevatedButton(
-                        child: const Text('Explore Planets!'),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => PlanetPage()),
-                        );
-                        },
-                      ),
-                    ElevatedButton(
-                        child: const Text('See NASA News!'),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => NasaNewsPage()),
-                        );
-                        },
-                      ),
+                    new SizedBox(
+                      width: 200.0,
+                      height: 80.0,
+                        child: ElevatedButton(
+                          child: const Text('Explore Planets!'),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => PlanetPage()),
+                            );
+                          },
+                        ),
+                    ),
+                    const SizedBox(height: 50),
+                    new SizedBox(
+                      width: 200.0,
+                      height: 80.0,
+                        child: ElevatedButton(
+                            child: const Text('See NASA News!'),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => NasaNewsPage()),
+                            );
+                            },
+                          ),
+                      )
                     ]
                 )
             ]
