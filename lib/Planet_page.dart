@@ -22,8 +22,8 @@ class _PlanetPageState extends State<PlanetPage> {
         backgroundColor: Colors.transparent,
         leading: IconButton(icon:const Icon(Icons.arrow_back_ios), onPressed: () {
           Navigator.of(context).maybePop();
-
-        },color: Colors.white),
+        },
+        color: Colors.white),
       ),
       body: SafeArea(
         top: false,
@@ -54,7 +54,7 @@ class _PlanetPageState extends State<PlanetPage> {
                     child: Swiper(
                       // autoplay: true,
                       itemCount: planets.length,
-                      itemWidth: MediaQuery.of(context).size.width - 2 * 64,
+                      itemWidth: MediaQuery.of(context).size.width - 3 * 64,
                       layout: SwiperLayout.STACK,
                       pagination: SwiperPagination(
                         builder: DotSwiperPaginationBuilder(

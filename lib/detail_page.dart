@@ -17,6 +17,7 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SafeArea(
         bottom: false,
         child: Stack(
@@ -27,11 +28,17 @@ class _DetailPageState extends State<DetailPage> {
                   Padding(
                     padding: const EdgeInsets.all(27.0),
                     child: Column(
-                      
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        const SizedBox(height: 300),
-                        const ColoredBox(color: Colors.black),
+                        Positioned(
+                          right: 15,
+                          top: 15,
+                          child: Hero(
+                            tag: widget.planetInfo,
+                            child: Image.asset(widget.planetInfo.iconImage),
+                          ),
+                        ),
+                        const ColoredBox(color: Colors.white),
                         Text(
                           widget.planetInfo.name,
                           style: GoogleFonts.poppins(
@@ -56,22 +63,15 @@ class _DetailPageState extends State<DetailPage> {
                       ],
                     ),
                   ),
-                  
                 ],
               ),
             ),
-            Positioned(
-              right: 15,
-              top: 15,
-              child: Hero(
-                tag: widget.planetInfo,
-                child: Image.asset(widget.planetInfo.iconImage),
-              ),
-            ),
             IconButton(
+              color: Colors.white,
               icon: const Icon(Icons.arrow_back_ios),
               onPressed: () {
                 Navigator.pop(context);
+                
               },
             ),
           ],

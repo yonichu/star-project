@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:newproject/Planet_page.dart';
+import 'package:newproject/nasa_news_page.dart';
 
 class DomPage extends StatefulWidget {
   @override
@@ -15,18 +15,35 @@ class _DomPageState extends State<DomPage> {
       appBar: AppBar(
         title: const Text('First Route'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Open route'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => PlanetPage()),
-            );
-          },
-        ),
+      body: InkWell(
+          child: Stack(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    ElevatedButton(
+                      child: const Text('Explore Planets!'),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => PlanetPage()),
+                       );
+                      },
+                    ),
+                   /* TextButton(
+                      child: const Text('See NASA News!'),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => NasaNewsPage()),
+                       );
+                      },
+                    ),*/
+                  ]
+              )
+            ]
+          )
       ),
     );
   }
 }
-
