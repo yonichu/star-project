@@ -26,7 +26,7 @@ class _DomPageState extends State<DomPage> {
                     const EdgeInsets.symmetric(horizontal: 200, vertical: 100)),
                     new SizedBox(
                       width: 200.0,
-                      height: 80.0,
+                      height: 100.0,
                         child: ElevatedButton(
                           child: const Text('Explore Planets!'),
                           onPressed: () {
@@ -40,7 +40,7 @@ class _DomPageState extends State<DomPage> {
                     const SizedBox(height: 50),
                     new SizedBox(
                       width: 200.0,
-                      height: 80.0,
+                      height: 100.0,
                         child: ElevatedButton(
                             child: const Text('See NASA News!'),
                             onPressed: () {
