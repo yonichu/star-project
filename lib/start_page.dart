@@ -9,7 +9,6 @@ class DomPage extends StatefulWidget {
 
 class _DomPageState extends State<DomPage> {
   @override
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container( 
@@ -23,11 +22,9 @@ class _DomPageState extends State<DomPage> {
           child: Stack(
             children: <Widget>[ 
                 Column(
-
                     children: <Widget>[ new Padding(padding: 
                     const EdgeInsets.symmetric(horizontal: 200, vertical: 100)),
                       ElevatedButton(
-                        
                         child: const Text('Explore Planets!'),
                         onPressed: () {
                           Navigator.push(
