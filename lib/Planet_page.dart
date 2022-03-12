@@ -41,14 +41,14 @@ class _PlanetPageState extends State<PlanetPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(144.0),
+                    padding: const EdgeInsets.all(90.0),
                     child: Column(
                       children: <Widget>[
                       ],
                     ),
                   ),
                   Container(
-                    height: 500.0,
+                    height: 600.0,
                     padding: const EdgeInsets.only(left: 5.0),
                 
                     child: Swiper(
