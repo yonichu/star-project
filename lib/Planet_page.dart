@@ -53,11 +53,10 @@ class _PlanetPageState extends State<PlanetPage> {
                     padding: const EdgeInsets.only(left: 5.0),
                 
                     child: Swiper(
-                      // autoplay: true,
                       itemCount: planets.length,
                       itemWidth: MediaQuery.of(context).size.width - 3 * 64,
                       layout: SwiperLayout.STACK,
-                      pagination: SwiperPagination(
+                      pagination: const SwiperPagination(
                         builder: DotSwiperPaginationBuilder(
                           activeSize: 15.0,
                           space: 8.0,
@@ -79,7 +78,6 @@ class _PlanetPageState extends State<PlanetPage> {
                             children: <Widget>[
                               
                               Hero(
-                                
                                 tag: planets[index],
                                 child: Column(children: <Widget>[
                                   Image.asset(planets[index].iconImage),
