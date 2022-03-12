@@ -7,6 +7,8 @@ import 'package:newproject/swiper_data.dart';
 import 'constants.dart';
 
 class PlanetPage extends StatefulWidget {
+  const PlanetPage({Key? key}) : super(key: key);
+
   @override
   _PlanetPageState createState() => _PlanetPageState();
 }
@@ -30,7 +32,7 @@ class _PlanetPageState extends State<PlanetPage> {
         
         child: SingleChildScrollView(
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/pepe.jpg"),
                 fit: BoxFit.cover,
@@ -44,7 +46,7 @@ class _PlanetPageState extends State<PlanetPage> {
                     padding: const EdgeInsets.all(65.0),
                     
                     child: Column(
-                      children: <Widget>[
+                      children: const <Widget>[
                       ],
                     ),
                   ),
@@ -81,9 +83,9 @@ class _PlanetPageState extends State<PlanetPage> {
                                 tag: planets[index],
                                 child: Column(children: <Widget>[
                                   Image.asset(planets[index].iconImage),
-                                  SizedBox(height: 50,),
+                                  const SizedBox(height: 50,),
                                   Text(
-                                    planets[index].name, style: TextStyle(
+                                    planets[index].name, style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 30
                                       ) 
