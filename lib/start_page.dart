@@ -13,7 +13,7 @@ class _DomPageState extends State<DomPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container( 
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/pepe.jpg"),
                 fit: BoxFit.cover,
@@ -23,12 +23,23 @@ class _DomPageState extends State<DomPage> {
           child: Stack(
             children: <Widget>[ 
                 Column(
-                    children: <Widget>[ new Padding(padding: 
-                    const EdgeInsets.symmetric(horizontal: 200, vertical: 200)),
-                    new SizedBox(
+                    children: <Widget>[ const Padding(padding: 
+                    EdgeInsets.symmetric(horizontal: 200, vertical: 80)),
+                    const Text(
+                      'Planet Trip',
+                      style: TextStyle(color: Colors.white, fontSize: 80, ),
+                    ),
+                    SizedBox(height: 80),
+                    SizedBox(
                       width: 200.0,
                       height: 100.0,
                         child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.transparent, 
+                            side: const BorderSide(width: 2, 
+                            color: Color.fromARGB(255, 29, 83, 128))
+                            ),
+                          
                           child: Text(
                             'Explore Planets!',
                             style: GoogleFonts.poppins(
@@ -43,10 +54,16 @@ class _DomPageState extends State<DomPage> {
                         ),
                     ),
                     const SizedBox(height: 50),
-                    new SizedBox(
+                    SizedBox(
                       width: 200.0,
                       height: 100.0,
+                      
                         child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.transparent, 
+                            side: const BorderSide(width: 2, 
+                            color: Color.fromARGB(255, 29, 83, 128))
+                            ),
                             child: Text(
                               'See NASA News!',
                               style: GoogleFonts.poppins(
