@@ -9,32 +9,25 @@ import 'constants.dart';
 class PlanetPage extends StatefulWidget {
   @override
   _PlanetPageState createState() => _PlanetPageState();
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Second Route'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-          
-        ),
-      ),
-    );
-  }
 }
+
 
 class _PlanetPageState extends State<PlanetPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: gradientEndColor,
+      backgroundColor: Colors.transparent,
+      appBar: AppBar(
+      
+        backgroundColor: Colors.transparent,
+        leading: IconButton(icon:const Icon(Icons.arrow_back_ios), onPressed: () {
+          Navigator.of(context).maybePop();
+
+        },color: Colors.white),
+      ),
       body: SafeArea(
         top: false,
+        
         child: SingleChildScrollView(
           child: Container(
             decoration: BoxDecoration(
@@ -57,6 +50,7 @@ class _PlanetPageState extends State<PlanetPage> {
                   Container(
                     height: 500.0,
                     padding: const EdgeInsets.only(left: 5.0),
+                
                     child: Swiper(
                       // autoplay: true,
                       itemCount: planets.length,

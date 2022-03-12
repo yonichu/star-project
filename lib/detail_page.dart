@@ -31,6 +31,7 @@ class _DetailPageState extends State<DetailPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         const SizedBox(height: 300),
+                        const ColoredBox(color: Colors.black),
                         Text(
                           widget.planetInfo.name,
                           style: GoogleFonts.poppins(
@@ -39,7 +40,7 @@ class _DetailPageState extends State<DetailPage> {
                             color: primaryTextColor,
                           ),
                         ),
-                        const Divider(color: Colors.black38),
+                        const Divider(color: Colors.white),
                         const SizedBox(height: 32.0),
                         Text(
                           widget.planetInfo.description,
@@ -51,7 +52,7 @@ class _DetailPageState extends State<DetailPage> {
                               color: contentTextColor),
                         ),
                         const SizedBox(height: 32.0),
-                        const Divider(color: Colors.black38),
+                        const Divider(color: Colors.white),
                       ],
                     ),
                   ),
