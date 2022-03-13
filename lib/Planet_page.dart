@@ -7,6 +7,8 @@ import 'package:newproject/swiper_data.dart';
 import 'constants.dart';
 
 class PlanetPage extends StatefulWidget {
+  const PlanetPage({Key? key}) : super(key: key);
+
   @override
   _PlanetPageState createState() => _PlanetPageState();
 }
@@ -30,7 +32,7 @@ class _PlanetPageState extends State<PlanetPage> {
         top: false,
         child: SingleChildScrollView(
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/pepe.jpg"),
                 fit: BoxFit.cover,
@@ -59,7 +61,7 @@ class _PlanetPageState extends State<PlanetPage> {
                       itemCount: planets.length,
                       itemWidth: MediaQuery.of(context).size.width - 3 * 64,
                       layout: SwiperLayout.STACK,
-                      pagination: SwiperPagination(
+                      pagination: const SwiperPagination(
                         builder: DotSwiperPaginationBuilder(
                           activeSize: 15.0,
                           space: 8.0,

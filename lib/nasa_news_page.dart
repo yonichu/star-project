@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:newproject/start_page.dart';
 import 'package:google_fonts/google_fonts.dart'; 
 import 'constants.dart';
+import 'dart:convert';
 //import 'package:flutter/dart.core';
+
+Future<void> readJson() async {
+    final String response = await rootBundle.loadString('api.json');
+    final data = await json.decode(response);
+  }
 
 // TAKING API DATA FROM JSON FILE/api.json
 class Article
