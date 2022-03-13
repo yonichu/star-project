@@ -109,7 +109,7 @@ class _NasaNewsPageState extends State<NasaNewsPage> {
   }
 
   Future<Article> _getArticle() async {
-    Map<String, String> api_json =
+    Map<String, dynamic> api_json =
         jsonDecode(await rootBundle.loadString('assets/api.json'));
     Article article = Article.fromJson(api_json);
     return article;
