@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newproject/constants.dart';
-import 'package:newproject/swiper_data.dart';
+import 'package:Planet_trip/constants.dart';
+import 'package:Planet_trip/swiper_data.dart';
 
 class DetailPage extends StatefulWidget {
   final PlanetInfo planetInfo;

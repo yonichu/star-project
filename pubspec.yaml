@@ -1,4 +1,4 @@
-name: newproject
+name: Planet_trip
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -55,6 +55,12 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/newproject.ico" 
+  adaptive_icon_background: "assets/newproject.ico"
+
 # The following section is specific to Flutter.
 flutter:
 
@@ -64,9 +70,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  flutter:
-    assets:
-      - api.json
+
+  assets:
+    - assets/api.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

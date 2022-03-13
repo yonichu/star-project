@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newproject/Planet_page.dart';
-import 'package:newproject/nasa_news_page.dart';
+import 'package:Planet_trip/Planet_page.dart';
+import 'package:Planet_trip/nasa_news_page.dart';
 
 class DomPage extends StatefulWidget {
   @override

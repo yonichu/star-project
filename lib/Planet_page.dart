@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newproject/start_page.dart';
-import 'package:newproject/detail_page.dart';
-import 'package:newproject/swiper_data.dart';
+import 'package:Planet_trip/start_page.dart';
+import 'package:Planet_trip/detail_page.dart';
+import 'package:Planet_trip/swiper_data.dart';
 import 'constants.dart';
 
 class PlanetPage extends StatefulWidget {

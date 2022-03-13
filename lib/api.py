@@ -22,7 +22,7 @@ params={
 
 }
 def file(data):
-    with open("api.json", 'w+') as api_data: 
+    with open("/asstets/api.json", 'w+') as api_data: 
         str(json.dump(data,api_data)) 
 
 
