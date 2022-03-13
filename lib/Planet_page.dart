@@ -11,23 +11,23 @@ class PlanetPage extends StatefulWidget {
   _PlanetPageState createState() => _PlanetPageState();
 }
 
-
 class _PlanetPageState extends State<PlanetPage> {
+  static int _swiperIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-      
         backgroundColor: Colors.transparent,
-        leading: IconButton(icon:const Icon(Icons.arrow_back_ios), onPressed: () {
-          Navigator.of(context).maybePop();
-        },
-        color: Colors.white),
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.of(context).maybePop();
+            },
+            color: Colors.white),
       ),
       body: SafeArea(
         top: false,
-        
         child: SingleChildScrollView(
           child: Container(
             decoration: BoxDecoration(
@@ -42,17 +42,19 @@ class _PlanetPageState extends State<PlanetPage> {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(65.0),
-                    
                     child: Column(
-                      children: <Widget>[
-                      ],
+                      children: <Widget>[],
                     ),
                   ),
                   Container(
                     height: 600.0,
                     padding: const EdgeInsets.only(left: 5.0),
-                
                     child: Swiper(
+                      index: _swiperIndex,
+                      onIndexChanged: (index) {
+                        _swiperIndex = index;
+                        print(_swiperIndex);
+                      },
                       // autoplay: true,
                       itemCount: planets.length,
                       itemWidth: MediaQuery.of(context).size.width - 3 * 64,
@@ -77,21 +79,20 @@ class _PlanetPageState extends State<PlanetPage> {
                           },
                           child: Stack(
                             children: <Widget>[
-                              
                               Hero(
-                                
-                                tag: planets[index],
-                                child: Column(children: <Widget>[
-                                  Image.asset(planets[index].iconImage),
-                                  SizedBox(height: 50,),
-                                  Text(
-                                    planets[index].name, style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 30
-                                      ) 
-                                    ),
-                                ],)
-                              ),
+                                  tag: planets[index],
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset(planets[index].iconImage),
+                                      SizedBox(
+                                        height: 50,
+                                      ),
+                                      Text(planets[index].name,
+                                          style: TextStyle(
+                                              color: _swiperIndex == index ? Colors.white : Colors.transparent,
+                                              fontSize: 30)),
+                                    ],
+                                  )),
                             ],
                           ),
                         );
@@ -104,7 +105,6 @@ class _PlanetPageState extends State<PlanetPage> {
           ),
         ),
       ),
-      
     );
   }
 }
